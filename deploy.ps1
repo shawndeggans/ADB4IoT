@@ -1,5 +1,6 @@
-# Deployment script for the SQL portion of the IDAP infrastructure
-# Deployment expects a resource group with the appropriate name and tagging to be in place.
+# Deployment script for the Databricks - this is general use deployment script
+
+New-AzResourceGroup -Name 'scrgdbiotd01' -Location 'South Central US' -Tag @{Environment='dev'; Organization='ssd'; Dept='data engineering'; Project='mydevops'; 'Technical-Contact'='shawn.deggans'; 'Project-Owner'='shawn.deggans'}
 
 $deploymentEnvironment = 'd' # d, q, t, p
 
